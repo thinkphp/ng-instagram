@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="appInstagram">
+<head>
+    <meta charset="utf-8">
+    <title>Instagram Search Photo based on AngularJS</title>
+    <style>
+*{margin:0;
+ padding:0;
+list-style:none;
+}
+		body{
+			font-family:arial,sans-serif;
+			padding:1em;
+                  background: #ccc;
+
+		}
+h1{margin: 2%;color: #3a3}
+#container { margin-left: 10px; text-align: center; }
+#container  img{ float: left; width: 170px; display: inline-block; position: relative; margin-right: 20px; margin-bottom: 12px; }
+#photos img{ border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controller.js"></script>
+</head>
+<body style="margin-left: 10%">
+<h1><img src="https://angularjs.org/img/AngularJS-large.png" /></h1>
+
+<div ng-controller="mainCtrl">
+
+<h1>Instagram#{{example.hash}}</h1>
+
+<div id="container">
+
+<div id="photos">
+
+   <div ng-repeat="item in example.items">
+
+     <a ng-href="{{item.link}}" target="_blank"><img ng-src="{{item.images.low_resolution.url}}" class="instagram-image"></a>
+
+   <div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
